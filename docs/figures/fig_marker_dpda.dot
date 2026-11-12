@@ -1,0 +1,2 @@
+digraph G { rankdir=LR; node [shape=circle]; edge [fontsize=9]; s [shape=point,width=.1]; s->q0; q2 [shape=doublecircle];
+ q0 -> q0 [label="a|b, any / push"]; q0 -> q1 [label="c, any / any"]; q1 -> q1 [label="x, x / ε"]; q1 -> q2 [label="ε, Z / Z"]; }

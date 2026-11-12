@@ -1,0 +1,7 @@
+digraph G { rankdir=LR; node [shape=circle]; edge [fontsize=9]; s [shape=point,width=.1]; s->q0;
+ q2 [shape=doublecircle];
+ q0 -> q0 [label="x, any / x·any   (push, x∈{a,b})"];
+ q0 -> q1 [label="ε, any / any   (guess even centre)"];
+ q0 -> q1 [label="x, any / any   (consume odd centre)"];
+ q1 -> q1 [label="x, x / ε   (match & pop)"];
+ q1 -> q2 [label="ε, Z / Z"]; }

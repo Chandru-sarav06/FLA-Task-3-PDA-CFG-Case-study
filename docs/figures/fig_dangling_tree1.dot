@@ -1,0 +1,27 @@
+digraph T { node [shape=plaintext, fontsize=11]; edge [arrowhead=none];
+n1 [label="Stmt"];
+n2 [label="if", fontname="Courier-Bold"];
+n1 -> n2;
+n3 [label="c", fontname="Courier-Bold"];
+n1 -> n3;
+n4 [label="then", fontname="Courier-Bold"];
+n1 -> n4;
+n5 [label="Stmt"];
+n6 [label="if", fontname="Courier-Bold"];
+n5 -> n6;
+n7 [label="c", fontname="Courier-Bold"];
+n5 -> n7;
+n8 [label="then", fontname="Courier-Bold"];
+n5 -> n8;
+n9 [label="Stmt"];
+n10 [label="s", fontname="Courier-Bold"];
+n9 -> n10;
+n5 -> n9;
+n11 [label="else", fontname="Courier-Bold"];
+n5 -> n11;
+n12 [label="Stmt"];
+n13 [label="s", fontname="Courier-Bold"];
+n12 -> n13;
+n5 -> n12;
+n1 -> n5;
+}

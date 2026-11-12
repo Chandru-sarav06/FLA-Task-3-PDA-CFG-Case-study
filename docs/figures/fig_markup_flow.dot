@@ -1,0 +1,10 @@
+digraph G { rankdir=TB; node [shape=box, style=rounded]; edge [fontsize=10];
+ start [label="read next token", shape=ellipse];
+ start -> open [label="<t>"]; start -> close [label="</t>"]; start -> text [label="text / <br/>"]; start -> end [label="end of input"];
+ open [label="push t"]; open -> start; text [label="ignore"]; text -> start;
+ close [label="stack empty?", shape=diamond, style=""]; close -> e1 [label="yes"]; close -> cmp [label="no"];
+ cmp [label="top == t ?", shape=diamond, style=""]; cmp -> pop [label="yes"]; cmp -> e2 [label="no"];
+ pop [label="pop"]; pop -> start;
+ end [label="stack empty?", shape=diamond, style=""]; end -> acc [label="yes"]; end -> e3 [label="no"];
+ e1 [label="REJECT: stray closer", style="rounded,filled", fillcolor="#fde2e2"]; e2 [label="REJECT: mismatch", style="rounded,filled", fillcolor="#fde2e2"];
+ e3 [label="REJECT: unclosed tag", style="rounded,filled", fillcolor="#fde2e2"]; acc [label="ACCEPT", style="rounded,filled", fillcolor="#e2f5e2"]; }
